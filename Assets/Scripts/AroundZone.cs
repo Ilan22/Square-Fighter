@@ -22,7 +22,7 @@ public class AroundZone : MonoBehaviour{
             if (enemies is not null)
                 foreach (Collider2D c in enemies)
                     if (c.gameObject.scene.IsValid())
-                        c.GetComponent<EnemyBehaviour>().hit(2);
+                        c.GetComponent<EnemyBehaviour>().hit(2 + PlayerPrefs.GetInt("playerstrength", 0));
         }
     }
 }

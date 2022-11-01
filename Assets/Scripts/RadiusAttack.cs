@@ -38,9 +38,9 @@ public class RadiusAttack : MonoBehaviour{
             }
 
             Vector3 difference = enemyToAttack.position - transform.position;
-            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
+            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             direction.Normalize();
             GameObject projectile = Instantiate(projectilePrefab);
             projectile.transform.position = transform.position;

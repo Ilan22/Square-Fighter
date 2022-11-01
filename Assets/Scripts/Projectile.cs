@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour{
 
     private void OnTriggerEnter2D(Collider2D collider){
         if (collider.transform.tag == "Enemy"){
-            collider.GetComponent<EnemyBehaviour>().hit(5);
+            collider.GetComponent<EnemyBehaviour>().hit(5 + PlayerPrefs.GetInt("playerstrength", 0));
             if (piercingShots == 0){
                 if (reShot > 0){
                     Vector3 direction = Random.insideUnitSphere;

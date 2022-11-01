@@ -17,7 +17,7 @@ public class Missile : MonoBehaviour{
             if (enemies is not null)
                 foreach (Collider2D c in enemies){
                     if (c.gameObject.scene.IsValid())
-                        c.GetComponent<EnemyBehaviour>().hit(5);
+                        c.GetComponent<EnemyBehaviour>().hit(5 + PlayerPrefs.GetInt("playerstrength", 0));
                     Destroy(gameObject);
                 }
         }

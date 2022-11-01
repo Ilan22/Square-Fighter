@@ -1,18 +1,19 @@
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour{
+public class EnemyBehaviour : MonoBehaviour {
     private Transform player;
     public Rigidbody2D rb;
-    public GameObject xpOrb;
+    public GameObject[] xpAndCoin;
     public GameObject explosionParticles;
 
     public int xpAmount;
 
     public float speed;
-    public int life = 5;
+    public int life;
 
     private void Start(){
         player = GameObject.Find("Player").transform;
+        life += PlayerPrefs.GetInt("enemylife", 0);
     }
 
     void FixedUpdate(){
@@ -54,7 +55,7 @@ public class EnemyBehaviour : MonoBehaviour{
 
     private void SpawnXP(){
         if (Random.Range(0, 101) < 60){
-            GameObject g = Instantiate(xpOrb, transform.position, Quaternion.identity);
+            GameObject g = Instantiate(xpAndCoin[0], transform.position, Quaternion.identity);
             g.GetComponent<XP>().xpAmount = xpAmount;
             switch (gameObject.name){
                 case "1(Clone)":
@@ -62,6 +63,9 @@ public class EnemyBehaviour : MonoBehaviour{
                     break;
                 case "2(Clone)":
                     g.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("xpOrbs/xpOrb2");
+                    break;
+                case "3(Clone)":
+                    g.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("xpOrbs/xpOrb3");
                     break;
             }
         }

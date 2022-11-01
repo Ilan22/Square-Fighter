@@ -126,7 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1041525981284873020}
-  xpOrb: {fileID: 4747941225048135428, guid: 5824dda27878e4e4b92cbe66e74d187f, type: 3}
+  xpAndCoin:
+  - {fileID: 4747941225048135428, guid: 5824dda27878e4e4b92cbe66e74d187f, type: 3}
+  - {fileID: 5051614517644696046, guid: 44cb27ddaf0624549b5130634db357d3, type: 3}
   explosionParticles: {fileID: 5347629206128532844, guid: 398bee90d90a12f4887fec72c05f6d59, type: 3}
   xpAmount: 2
   speed: 2

@@ -6,6 +6,7 @@ public class addAbility : MonoBehaviour
 {
     public AroundSwords aroundSwords;
     public GameObject missileAbility;
+    public GameObject novaAbility;
     public GameObject[] aroundZones;
     public PlayerLife playerLife;
 
@@ -21,11 +22,12 @@ public class addAbility : MonoBehaviour
         PlayerPrefs.SetInt("life", 3);
         PlayerPrefs.SetInt("maxlife", 3);
         PlayerPrefs.SetInt("reshot", 0);
+        PlayerPrefs.SetInt("nova", 0);
+        PlayerPrefs.SetInt("playerstrength", 0);
     }
 
     public void add(int choice){
-        switch (choice)
-        {
+        switch (choice){
             case 1:
                 PlayerPrefs.SetFloat("shootSpeed", PlayerPrefs.GetFloat("shootSpeed", 2) - .5f);
                 break;
@@ -64,6 +66,13 @@ public class addAbility : MonoBehaviour
                 break;
             case 10:
                 PlayerPrefs.SetInt("reshot", PlayerPrefs.GetInt("reshot", 0) + 1);
+                break;
+            case 11:
+                novaAbility.SetActive(true);
+                PlayerPrefs.SetInt("nova", PlayerPrefs.GetInt("nova", 0) + 1);
+                break;
+            case 15:
+                PlayerPrefs.SetInt("playerstrength", PlayerPrefs.GetInt("playerstrength", 0) + 1);
                 break;
         }
     }

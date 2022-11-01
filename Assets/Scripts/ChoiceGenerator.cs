@@ -27,6 +27,8 @@ public class ChoiceGenerator : MonoBehaviour{
             possibleChoices.Add(9);
         if (PlayerPrefs.GetInt("reshot", 0) < 1)
             possibleChoices.Add(10);
+        if (PlayerPrefs.GetInt("nova", 0) < 1)
+            possibleChoices.Add(11);
 
         possibleChoices.Add(15);
 
