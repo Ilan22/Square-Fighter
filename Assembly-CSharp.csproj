@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F4DF372E-3E0A-172D-2774-DB53949B549A}</ProjectGuid>
+    <ProjectGuid>{7A677216-9F66-3688-A115-D1412BF8D99A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,8 +64,11 @@
     <Compile Include="Assets\Scripts\Bar.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Sword.cs" />
+    <Compile Include="Assets\Scripts\Nova.cs" />
     <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\ExplosiveEnemy.cs" />
+    <Compile Include="Assets\Scripts\NearChest.cs" />
+    <Compile Include="Assets\Scripts\ChestSpawner.cs" />
     <Compile Include="Assets\Scripts\SpawnPoints.cs" />
     <Compile Include="Assets\Scripts\XP.cs" />
     <Compile Include="Assets\Scripts\DynamicJoystick.cs" />
@@ -84,9 +87,6 @@
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\addAbility.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\ChestSpawner.cs" />
-    <Compile Include="Assets\Scripts\NearChest.cs" />
-    <Compile Include="Assets\Scripts\Nova.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -18,7 +18,7 @@ public class addAbility : MonoBehaviour
         PlayerPrefs.SetInt("aroundswordsspeed", -70);
         PlayerPrefs.SetInt("missile", 0);
         PlayerPrefs.SetInt("aroundzone", 0);
-        PlayerPrefs.SetFloat("xpmagnet", 0);
+        PlayerPrefs.SetFloat("xpmagnet", 0.5f);
         PlayerPrefs.SetInt("life", 3);
         PlayerPrefs.SetInt("maxlife", 3);
         PlayerPrefs.SetInt("reshot", 0);

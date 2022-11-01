@@ -24,7 +24,6 @@ public class Projectile : MonoBehaviour{
                 if (reShot > 0){
                     Vector3 direction = Random.insideUnitSphere;
                     direction.z = 0;
-                    Debug.Log(direction);
                     GetComponent<Rigidbody2D>().velocity = direction.normalized * projectileForce;
 
                     reShot = 0;
