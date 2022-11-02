@@ -38,6 +38,7 @@ public class addAbility : MonoBehaviour
                 PlayerPrefs.SetInt("piercingshots", PlayerPrefs.GetInt("piercingshots", 0) + 1);
                 break;
             case 4:
+                aroundSwords.gameObject.SetActive(true);
                 aroundSwords.ActivateSword(PlayerPrefs.GetInt("aroundswords"));
                 PlayerPrefs.SetInt("aroundswords", PlayerPrefs.GetInt("aroundswords", 0) + 1);
                 break;

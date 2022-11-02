@@ -18,8 +18,6 @@ public class MissileAbility : MonoBehaviour
         if (Time.time > nextActionTime){
             nextActionTime += period;
 
-            //Quaternion spread = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, 0f, (Random.Range(0, 361))));
-
             GameObject projectile = Instantiate(projectilePrefab);
             projectile.transform.position = transform.position;
             projectile.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0,361));

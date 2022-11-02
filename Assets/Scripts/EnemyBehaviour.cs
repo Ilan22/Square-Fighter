@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour {
@@ -20,15 +21,15 @@ public class EnemyBehaviour : MonoBehaviour {
         rb.MovePosition(Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime));
     }
 
-    private float coloNumberConversion(float num)
-    {
+    private float coloNumberConversion(float num){
         return (num / 255.0f);
     }
 
     public void hit(int amount){
-        if (life - amount > 0)
+        if (life - amount > 0){
             life -= amount;
-        else{
+            StartCoroutine(FlashSprites(GetComponent<SpriteRenderer>(), 1, 0.1f));
+        }else{
             SpawnXP();
             ParticleSystem ps = Instantiate(explosionParticles, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
 
@@ -47,7 +48,6 @@ public class EnemyBehaviour : MonoBehaviour {
             grad.SetKeys(new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(Color.white, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) });
 
             col.color = grad;
-
 
             Destroy(gameObject);
         }
@@ -68,6 +68,24 @@ public class EnemyBehaviour : MonoBehaviour {
                     g.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("xpOrbs/xpOrb3");
                     break;
             }
+        }
+    }
+
+    IEnumerator FlashSprites(SpriteRenderer sprites, int numTimes, float delay, bool disable = false){
+        for (int loop = 0; loop < numTimes; loop++){
+            if (disable)
+                sprites.enabled = false;
+            else
+                sprites.color = new Color(sprites.color.r, sprites.color.g, sprites.color.b, 0.5f);
+
+            yield return new WaitForSeconds(delay);
+
+            if (disable)
+                sprites.enabled = true;
+            else
+                sprites.color = new Color(sprites.color.r, sprites.color.g, sprites.color.b, 1);
+
+            yield return new WaitForSeconds(delay);
         }
     }
 }

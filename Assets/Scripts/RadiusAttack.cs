@@ -36,7 +36,6 @@ public class RadiusAttack : MonoBehaviour{
                     enemyToAttack = enemy.transform;
                 }
             }
-
             Vector3 difference = enemyToAttack.position - transform.position;
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;

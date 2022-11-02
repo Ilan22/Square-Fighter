@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\addAbility.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Culling.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
