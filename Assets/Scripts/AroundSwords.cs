@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AroundSwords : MonoBehaviour
-{
-    private bool isActive = false;
+public class AroundSwords : MonoBehaviour{
     public GameObject xpOrb;
 
     void Update(){
@@ -13,6 +11,5 @@ public class AroundSwords : MonoBehaviour
 
     public void ActivateSword(int sword){
         transform.GetChild(sword).gameObject.SetActive(true);
-        isActive = true;
     }
 }

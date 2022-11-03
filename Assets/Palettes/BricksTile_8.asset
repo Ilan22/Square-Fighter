@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: BricksTilemap_0
+  m_Name: BricksTile_8
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 2004780698, guid: 52f685acb0b6ab3459178b7255e7ae87, type: 3}
+  m_Sprite: {fileID: 867378863, guid: 9befdd9b17d059f419f476f453888caf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

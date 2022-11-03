@@ -18,7 +18,6 @@ public class Projectile : MonoBehaviour{
     }
 
     private void OnTriggerEnter2D(Collider2D collider){
-        Debug.Log(collider.name);
         if (collider.transform.tag == "Enemy"){
             collider.GetComponent<EnemyBehaviour>().hit(5 + PlayerPrefs.GetInt("playerstrength", 0));
             if (piercingShots == 0){
